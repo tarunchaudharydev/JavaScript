@@ -13,3 +13,9 @@ console.log(message.repeat(5).trim());
 for (let i = 5; (i = 1); i--) {
   console.log(i);
 }
+
+let i = 0;
+while (i < 6) {
+  console.log(i);
+  i++;
+}
