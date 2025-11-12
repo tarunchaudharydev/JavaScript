@@ -100,3 +100,13 @@ console.log(
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
     .join(" ")
 ); // Capitalizes each word
+
+firstName = "   Tarun   ";
+console.log(firstName.trim()); // "Tarun"
+console.log(firstName.trimStart()); // "Tarun   "
+console.log(firstName.trimEnd()); // "   Tarun"
+console.log(firstName.length); // 11
+console.log(firstName.trim().length); // 5
+console.log(firstName.replace(/\s+/g, "")); // "Tarun"
+console.log(firstName.replace(/^\s+/, "")); // "Tarun   "
+console.log(firstName.replace(/\s+$/, "")); // "   Tarun"
