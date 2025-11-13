@@ -81,3 +81,28 @@ function getMyName(firstName, lastName) {
 let fullName = getMyName("Tarun", "Kumar");
 
 console.log(fullName);
+
+// function declaration vs function expression vs arrow function
+
+// 1. Function Declaration
+function add(a, b) {
+  return a + b;
+}
+let result1 = add(3, 5);
+console.log(result1);
+
+// 2. Function Expression
+const multiply = function (a, b) {
+  return a * b;
+};
+
+let result2 = multiply(4, 6);
+console.log(result2);
+
+// 3. Arrow Function
+const subtract = (a, b) => {
+  return a - b;
+};
+
+let result3 = subtract(10, 4);
+console.log(result3);
