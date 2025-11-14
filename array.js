@@ -89,3 +89,115 @@ brr.sort();
 brr.includes(24);
 brr.indexOf(true);
 brr.reverse();
+
+// using map method
+//
+let arr5 = [10, 20, 30];
+
+let ansArray = arr5.map((number) => {
+  return number * number;
+});
+console.log(ansArray);
+
+arr5.map((number, index) => {
+  console.log(number);
+  console.log(index);
+});
+
+// using filter method
+let arr6 = [5, 12, 8, 130, 44];
+
+let evenArray = arr6.filter((number) => {
+  if (number % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+});
+
+console.log(evenArray);
+
+let str = ["Tarun", "Kumar", null, undefined, 1, 2, 2, 4, 3, 5];
+
+let stringArray = str.filter((element) => {
+  if (typeof element == "string") {
+    return true;
+  } else {
+    return false;
+  }
+});
+
+console.log(stringArray);
+
+// using reduce method
+let arr7 = [1, 2, 3, 4, 5];
+let ans = arr7.reduce((acc, curr) => {
+  return acc + curr;
+}, 0); // 0 is the initial value of acc
+
+console.log(ans);
+
+// chaining of array methods
+let arr8 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let finalAns = arr8
+  .filter((number) => number % 2 === 0) // filter even numbers
+  .map((number) => number * number) // square the even numbers
+  .reduce((acc, curr) => acc + curr, 0); // sum of squares
+console.log(finalAns);
+// finalAns will be 220 (4 + 16 + 36 + 64 + 100)
+
+//sort method
+let arr9 = [5, 2, 9, 1, 5, 6];
+arr9.sort((a, b) => a - b); // ascending order
+console.log(arr9);
+arr9.sort((a, b) => b - a); // descending order
+console.log(arr9);
+
+// indexOf method
+let arr10 = ["apple", "banana", "cherry", "date"];
+console.log(arr10.indexOf("cherry")); // 2
+console.log(arr10.indexOf("grape")); // -1
+
+//using forEach method
+let arr11 = [10, 20, 30, 40, 50];
+arr11.forEach((number, index) => {
+  console.log("Index: " + index + ", Number: " + number);
+});
+
+// using for-in loop
+let arr12 = ["a", "b", "c", "d"];
+for (let key in obj) {
+  console.log(key, " ", obj[key]);
+}
+
+// using for-of loop
+let arr13 = [100, 200, 300, 400];
+for (let value of arr13) {
+  console.log(value);
+}
+
+// array  with functions
+
+let arr15 = [1, 2, 3, 4, 5];
+
+function getSum(arr15) {
+  let len = arr15.length;
+  let sum = 0;
+  for (let i = 0; i < len; i++) {
+    sum += arr15[i];
+  }
+  return sum;
+}
+
+let total = getSum(arr15);
+console.log(total);
+// console.log(getSum(arr15));
+
+// using forEach in function
+function getTotal(arr15) {
+  let total = 0;
+  arr15.forEach((value) => {
+    total += value;
+  });
+  return total;
+}
