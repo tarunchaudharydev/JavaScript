@@ -42,3 +42,8 @@ try {
 } catch (e) {
   throw new Error("Custom Error: x is not defined");
 }
+
+let errorCode = 100;
+if (errorCode == 100) {
+  throw new Error("Invalid JSON");
+}
