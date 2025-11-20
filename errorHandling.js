@@ -15,7 +15,30 @@
 // handling ---> try...catch
 
 try {
+  console.log("try start here");
+  console.log(x);
+  console.log("try end here");
   // jo error aa sakta hai usko try me rakhte hai
 } catch (e) {
+  console.log("catch block starts");
+  console.log("Error caught:", e, "end of catch block");
   // what to do if error occurs and e is the error object
+}
+
+// finally block --> this block will always execute
+
+try {
+  console.log("Inside try block");
+} catch (error) {
+} finally {
+}
+
+// to show error by default
+
+// custom error ---> using "throw" keyword
+
+try {
+  console.log(x);
+} catch (e) {
+  throw new Error("Custom Error: x is not defined");
 }
