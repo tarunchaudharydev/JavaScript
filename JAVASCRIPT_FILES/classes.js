@@ -5,6 +5,9 @@ class Human {
   #wt = 80; // private
   ht = 180;
 
+
+
+  // constructor -----> special function ----> it is called when object is created.
   constructor(newAge, newHeight) {
     this.age = newAge;
     this.ht = newHeight;
@@ -34,3 +37,23 @@ console.log(obj.age);
 //console.log(obj.#wt); // we cannot access private property outside the class
 
 obj.walking();
+
+
+class Car {
+  // properties
+  color;
+  #price;
+  #brand;
+
+  // constructor
+  constructor(newColor, newPrice, newBrand){
+    this.color = newColor;
+    this.#price = newPrice;
+    this.#brand = newBrand;
+  }
+
+  // behavior
+  running(){
+    
+  }
+}
