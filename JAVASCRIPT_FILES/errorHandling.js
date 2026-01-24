@@ -14,36 +14,31 @@
 
 // handling ---> try...catch
 
-try {
-  console.log("try start here");
+try{
+  console.log("Try block starts here");
   console.log(x);
-  console.log("try end here");
-  // jo error aa sakta hai usko try me rakhte hai
-} catch (e) {
-  console.log("catch block starts");
-  console.log("Error caught:", e, "end of catch block");
-  // what to do if error occurs and e is the error object
+  console.log("Try block ends here");
+} catch(e){
+  console.log("I am inside catch block");
 }
 
-// finally block --> this block will always execute
 
-try {
-  console.log("Inside try block");
-} catch (error) {
-} finally {
+// finally block ---> this will run every time
+
+try{
+  console.log("I am inside try block");
+}catch(error){
+  console.log("i am inside catch block");
+}
+finally{
+  console.log("i am inside finally block");
 }
 
-// to show error by default
+// custom error
+throw new Error("I am a custom error");
 
-// custom error ---> using "throw" keyword
-
-try {
-  console.log(x);
-} catch (e) {
-  throw new Error("Custom Error: x is not defined");
-}
-
-let errorCode = 100;
-if (errorCode == 100) {
-  throw new Error("Invalid JSON");
+try{
+  console.log("I am inside try block");
+}catch(err){
+  throw new Error("This is error");
 }
