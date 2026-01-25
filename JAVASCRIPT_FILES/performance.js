@@ -48,3 +48,4 @@ document.body.appendChild(fragment);
 const t6 = performance.now();
 
 console.log(t6-t5);
+
