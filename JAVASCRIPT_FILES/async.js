@@ -24,3 +24,30 @@ async function Data(){
 }
 
 Data();
+
+
+
+
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+const url = "https://jsonplaceholder.typicode.com/posts";
+
+const options = {
+  method: "POST",
+  body: JSON.stringify({title: "Tarun Kumar"}),
+  headers: myHeaders,
+
+};
+// const response = await fetch(myRequest);
+
+
+
+
+async function postdata(){
+  const response = await fetch(url, options);
+  let data = await response.json();
+  console.log("My data ", data);
+}
+
+postdata();
