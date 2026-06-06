@@ -1,13 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
 
-  <script src="../JAVASCRIPT_FILES/async.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <title>Techtronica</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Container positioning */
+    .logo-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Subtle infinite float */
+    .float {
+      animation: float 7s ease-in-out infinite;
+    }
+
+    /* Infinite energy wave */
+    .energy {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg,
+          transparent 40%,
+          rgba(0, 0, 0, 0.12) 50%,
+          transparent 60%);
+      transform: translateX(-120%);
+      animation: energyFlow 4.5s ease-in-out infinite;
+      mix-blend-mode: multiply;
+      pointer-events: none;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    @keyframes energyFlow {
+      0% {
+        transform: translateX(-120%);
+        opacity: 0;
+      }
+
+      20% {
+        opacity: 1;
+      }
+
+      50% {
+        transform: translateX(120%);
+        opacity: 1;
+      }
+
+      70% {
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateX(120%);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-white min-h-screen flex items-center justify-center overflow-hidden">
+
+  <!-- LOGO -->
+  <div class="logo-container float">
+
+    <!-- EXACT IMAGE -->
+    <img src=".././assets/logo.png" alt="Techtronica Logo" class="w-[520px] max-w-[90vw] block select-none" draggable="false" />
+
+    <!-- ENERGY WAVE -->
+    <div class="energy"></div>
+
+  </div>
+
 </body>
+
 </html>
